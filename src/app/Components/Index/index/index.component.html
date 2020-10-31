@@ -1,0 +1,35 @@
+<div class="contrainer rootContainer ml-4 mr-4">
+  <div class="row align-items-center headbuttongroup">
+    <div class="border border-dark col-1 p-0 rounded-pill m-1">
+      <button class="btn btn-primary btn-block btn-lg rounded-pill" [routerLink]="['RxStudy']">
+        RxjsStudy
+      </button>
+    </div>
+    <div class="border border-dark col-1 p-0 rounded-pill m-1">
+      <button class="btn btn-primary btn-block btn-lg rounded-pill" [routerLink]="['ParentChildStudy']">
+        ParentChild
+      </button>
+    </div>
+    <div class="border border-dark col-1 p-0 rounded-pill m-1">
+      <button class="btn btn-primary btn-block btn-lg rounded-pill" [routerLink]="['DevExpressStudy']">
+        DevExpress
+      </button>
+    </div>
+    <div class="border border-dark col-1 p-0 rounded-pill m-1">
+      <button class="btn btn-primary btn-block btn-lg rounded-pill">
+        Study4
+      </button>
+    </div>
+    <div class="border border-dark col-1 p-0 rounded-pill m-1">
+      <button class="btn btn-primary btn-block btn-lg rounded-pill">
+        Study5
+      </button>
+    </div>
+  </div>
+  <div class="row persentationview">
+    <div class="border border-primary col-12">
+      <router-outlet>
+      </router-outlet>
+    </div>
+  </div>
+</div>

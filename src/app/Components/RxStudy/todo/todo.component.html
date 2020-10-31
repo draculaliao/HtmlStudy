@@ -1,0 +1,59 @@
+<div class="row border border-bottom justify-content-center  align-items-center">
+  <div class="col-1">
+    <button class="btn btn-primary btn-lg rounded-pill" (click)="Subjectsubscripe()">Subject</button>
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary btn-lg rounded-pill" (click)="Replaysubscripe()">Replay(5)</button>
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary btn-lg rounded-pill" (click)="Behavior_SubjectSubscripe()">Behavior</button>
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary btn-lg rounded-pill" (click)="AsyncSubject()">Async</button>
+  </div>
+  <div class="col-1">
+    路名過濾：
+  </div>
+  <div class="col-1">
+    <input type="text" class="form-control" [(ngModel)]="searchRoad" [ngModelOptions]="{standalone: true}"
+      (input)="searchinput()" (keyup.enter)="searchinput()">
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary btn-lg rounded-pill" (click)="Reset()">RESET</button>
+  </div>
+</div>
+<div class="row border border-bottom justify-content-center  align-items-center">
+  <div class="col-1">
+    <button class="btn btn-primary btn-lg rounded-pill" (click)="AsyncComplete()">AsyncComplete</button>
+  </div>
+  <div class="col-1">
+    <button class="btn btn-primary btn-lg rounded-pill" (click)="AsyncUnsubscribe()">AsyncUnsubscribe</button>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-2">
+    <h1 class="m-auto p-auto">RxjsStudyTable</h1>
+  </div>
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead>
+        <th scope="col">顯示看板編號</th>
+        <th scope="col">路段</th>
+        <th scope="col">路段起始點</th>
+        <th scope="col">路段結束點</th>
+        <th scope="col">經度</th>
+        <th scope="col">緯度</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of filterInfo; let i=index">
+          <td scope="row">{{item.cmsid}}</td>
+          <td>{{item.roadsection}}</td>
+          <td>{{item.startlocationpoint}}</td>
+          <td>{{item.endlocationpoint}}</td>
+          <td>{{item.py}}</td>
+          <td>{{item.px}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

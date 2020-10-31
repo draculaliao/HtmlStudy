@@ -1,0 +1,19 @@
+<div class="row">
+  <h3>ListSelection</h3>
+</div>
+<div class="row">
+  <dx-list *ngIf="lists.length > 0" [dataSource]="lists" [height]="200" [selectionMode]="selectionModeValue"
+    [keyExpr]="id" [showSelectionControls]="false" [selectedItemKeys]="[]" [noDataText]=""></dx-list>
+</div>
+<div class="row">
+  <h3>ag-Grid</h3>
+</div>
+<div class="row">
+  <ag-grid-angular style="width: 100%; height: 500px;" class="ag-theme-balham" [rowData]="rowData"
+    [columnDefs]="columnDefs" (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+</div>
+<div class="row mt-5">
+  <dx-radio-group #raioGroup [items]="priorities" [value]="priorities[0]" layout="horizontal">
+  </dx-radio-group>
+</div>
